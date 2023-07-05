@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.ComprobanteTransferencia" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start" Margin="10,0"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+            <StackLayout Orientation="Vertical" BackgroundColor="#E0ECEE" Margin="30" HeightRequest="470">
+                <Image Source="visto" WidthRequest="75" Margin="15"></Image>
+
+                <Label Text="¡Transferencia Exitosa!" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="0,15" HorizontalTextAlignment="Center"/>
+
+                <StackLayout BackgroundColor="White" Margin="15,5" Padding="10">
+                    <Label Text="Monto: ($monto)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                    <Label Text="Fecha: (fecha transferencia)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Margin="15,0" Padding="10">
+                    <Label Text="Cuenta de origen" FontAttributes="Bold" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                    <Label Text="Nombre: (Nombre y Apellido)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                    <Label Text="No. Cuenta: (numero de cuenta)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                </StackLayout>
+
+                <StackLayout BackgroundColor="White" Margin="15,5" Padding="10">
+                    <Label Text="Cuenta de destino" FontAttributes="Bold" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                    <Label Text="Nombre: (Nombre y Apellido)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                    <Label Text="No. Cuenta: (numero de cuenta)" TextColor="Black" Margin="10,0" HorizontalOptions="Start" FontSize="12"/>
+                </StackLayout>
+            </StackLayout>
+            <Button x:Name="btnInicio" Clicked="btnInicio_Clicked" Margin="70,10" Text="Realizar otra transacción" HeightRequest="50" BackgroundColor="#B1D2D7" 
+                    FontAttributes="Bold" CornerRadius="30" TextTransform="None"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

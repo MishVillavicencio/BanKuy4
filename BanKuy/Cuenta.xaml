@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Cuenta"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+            <Label Text="Abre una cuenta de manera simple y sin salir de casa" TextColor="#CC4B00" FontSize="Medium" Margin="50,30" HorizontalTextAlignment="Center" />
+            <Label Text="En solo 5 minutos din filas ni papeles, obtendrás la cuenta que necesitas" Margin="50,0" HorizontalTextAlignment="Center" />
+            <Label Text="Beneficios" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="20,25"/>
+            <Label Text="* Administra tu cuenta inmediatamente desde la App" Margin="50,15" HorizontalTextAlignment="Start" />
+            <Label Text="* Transferir dinero al instante sin hacer fila" Margin="50,15" HorizontalTextAlignment="Start" />
+            <Label Text="* Con tu tarjeta realiza retiros en cualquier cajero" Margin="50,20" HorizontalTextAlignment="Start" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

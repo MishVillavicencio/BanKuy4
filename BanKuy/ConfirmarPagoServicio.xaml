@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.ConfirmarPagoServicio" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start" Margin="10,0"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+            <Label Text="Confima los datos del pago" TextColor="#CC4B00" FontSize="Medium" Margin="50,40" HorizontalTextAlignment="Center" />
+
+            <Image Source="dinero" WidthRequest="80" Margin="0,0,0,30"></Image>
+            <Label Text="Total del pago: ($monto)" FontAttributes="Bold" TextColor="Black" Margin="10" HorizontalOptions="Center" FontSize="14"/>
+            <Label Text="De la cuenta: (no. de cuenta del que va a trasferir)" TextColor="Black" Margin="10" HorizontalOptions="CenterAndExpand" FontSize="14"/>
+            <Label Text="Beneficiario: (Nombre y apellido de quien esta el servicio)" FontAttributes="Bold" TextColor="Black" Margin="10" HorizontalOptions="CenterAndExpand" FontSize="14"/>
+            <Label Text="Servicio: (Agua o Luz)" FontAttributes="Bold" TextColor="Black" Margin="10" HorizontalOptions="CenterAndExpand" FontSize="14"/>
+
+            <Button x:Name="btnConfirmarPago" Clicked="btnConfirmarPago_Clicked"  Margin="70,50" Text="Confirmar Pago" HeightRequest="50" BackgroundColor="#2f4f4f" 
+                        TextColor="White" FontAttributes="Bold" CornerRadius="30" TextTransform="None"/>
+            <Button x:Name="btnCancelar" Clicked="btnCancelar_Clicked" Margin="70,-40" Text="Cancelar" HeightRequest="50" BackgroundColor="#B1D2D7" 
+                    FontAttributes="Bold" CornerRadius="30" TextTransform="None"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

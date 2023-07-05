@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Agua">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+
+            <Label Text="Completa el formulario para pagar el Servicio de Agua-Potable" TextColor="Black" Margin="15" FontSize="14"/>
+            <Label Text="*No. Suministro:" TextColor="Black" Margin="10" HorizontalOptions="Center" FontSize="14"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Frame HeightRequest="40" WidthRequest="250"
+                        BackgroundColor="#E0ECEE" Padding="5"
+                  HasShadow="True" CornerRadius="10" >
+                    <Entry x:Name="txtSuministro" FontSize="12"/>
+                </Frame>
+            </StackLayout>
+
+            <Label Text="*Descripción:" TextColor="Black" Margin="10" HorizontalOptions="Center" FontSize="14"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Frame HeightRequest="40" WidthRequest="250"
+                        BackgroundColor="#E0ECEE" Padding="5"
+                  HasShadow="True" CornerRadius="10" >
+                    <Entry x:Name="txtDescripcion" FontSize="12"/>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="btnContinuar" Clicked="btnContinuar_Clicked" Margin="120,30" Text="Continuar" HeightRequest="50" BackgroundColor="#2f4f4f" 
+                        TextColor="White" FontAttributes="Bold" CornerRadius="30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

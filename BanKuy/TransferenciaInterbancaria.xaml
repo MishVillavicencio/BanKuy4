@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.TransferenciaInterbancaria">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+
+            <Label Text="Transferencia Interbancaria" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center"/>
+            <Label Text="Selecciona el Banco de destino: " TextColor="Black" Margin="15" FontSize="14"/>
+            <Button x:Name="btnPichincha"  Text="Banco Pichincha" Clicked="btnPichincha_Clicked" BackgroundColor="#B1D2D7" Margin="100,5" TextTransform="None" CornerRadius="10" />
+            <Button x:Name="btnGuayaquil"  Text="Banco Guayaquil" Clicked="btnGuayaquil_Clicked" BackgroundColor="#B1D2D7" Margin="100,5" TextTransform="None" CornerRadius="10"/>
+            <Button x:Name="btnPacifico"  Text="Banco del Pacífico" Clicked="btnPacifico_Clicked" BackgroundColor="#B1D2D7" Margin="100,5" TextTransform="None" CornerRadius="10"/>
+            <Button x:Name="btnAustro" Text="Banco del Austro" Clicked="btnAustro_Clicked" BackgroundColor="#B1D2D7" Margin="100,5" TextTransform="None" CornerRadius="10"/>
+            <Button x:Name="btnProdubanco" Text="Produbanco" Clicked="btnProdubanco_Clicked" BackgroundColor="#B1D2D7" Margin="100,5" TextTransform="None" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

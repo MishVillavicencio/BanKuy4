@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Transferencia"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="80" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Transferencia" TextColor="#1D4E89" FontSize="25" Margin="5" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame HeightRequest="115" WidthRequest="420"  BackgroundColor="#E0ECEE" Padding="10" HasShadow="True" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Desde" Margin="15,0" FontSize="14" TextColor="Black"></Label>
+                        <Label Text="Karina Loor" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black"></Label>
+                        <Label Text="Nro. 1234567899" Margin="15,0" x:Name="idcuenta"  FontSize="14" TextColor="Black"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text="$15,30" x:Name="idMonto" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+            <Label Text="Escoja el tipo de transferencia: " TextColor="Black" Margin="20" FontSize="14"/>
+            <Button x:Name="btnDirecta" Clicked="btnDirecta_Clicked" BackgroundColor="#B1D2D7" Margin="100,10" TextTransform="None" Text="Transferencia Directa" CornerRadius="10"/>
+            <Button x:Name="btnInterbancaria" Clicked="btnInterbancaria_Clicked" Text="Transferencia Interbancaria" BackgroundColor="#B1D2D7"  TextTransform="None" Margin="100,10" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

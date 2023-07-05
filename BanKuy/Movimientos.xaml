@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Movimientos"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame HeightRequest="150" WidthRequest="420"  BackgroundColor="#E0ECEE" Padding="10" HasShadow="True" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Cuenta de Ahorros" Margin="15,0" FontSize="14" TextColor="Black"></Label>
+                        <Label Text="Karina Loor" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black"></Label>
+                        <Label Text="Nro. 1234567899" x:Name="idCuenta" Margin="15,0" FontSize="14" TextColor="Black"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text="Saldo Disponible" Margin="10,0" FontSize="14" Padding="2" TextColor="Black"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text="$15.30" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Movimientos" x:Name="ds" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="20,5"/>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Entradas" Clicked="Button_Clicked"></Button>
+                <Button Text="Salidas" Clicked="Button_Clicked_1"></Button>
+                <Button Text="Servicios Basicos"></Button>
+                
+            </StackLayout>
+            <ListView x:Name="lstLiatadoEstudiantes" SelectionMode="Single" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid MinimumHeightRequest="80">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5*"></RowDefinition>
+                                        <RowDefinition Height="2*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" ></ColumnDefinition>
+                                        <ColumnDefinition  Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    
+
+                                    <Label Text="{Binding idTransaccion}" TextColor="Black" FontSize="10" Grid.Column="0"/>
+                                    <Label Text="{Binding idCuentaOrigen}" TextColor="Black" FontSize="10" Grid.Column="1" FontAttributes="Bold" VerticalOptions="Center"/>
+                                    <Label Text="{Binding idCuentaDestino}" TextColor="Black" FontSize="10" Grid.Column="2" FontAttributes="Bold" VerticalOptions="Center" />
+                                    <Label Text="{Binding monto}"  FontSize="10" TextColor="Black" Grid.Column="3" FontAttributes="Bold" VerticalOptions="Center"/>
+                                    <Label Text="{Binding fechaTransaccion}" FontSize="10" TextColor="Black" Grid.Column="4" FontAttributes="Bold"/>
+
+                                </Grid>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.LoginUserPass"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="80" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ingresa tu usuario y contraseña" TextColor="#1D4E89" FontSize="Small" Margin="50" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Regular}"></Label>
+                <Frame Padding="0" Margin="70,0,70,0" BorderColor="#542B21">
+                    <Entry x:Name="txtCorreo" FontSize="13" Placeholder="Usuario" Margin="30,10" FontFamily="{StaticResource Hack-Italic}"/>
+                </Frame>
+                <Frame Padding="0" Margin="70,20" BorderColor="#542B21">
+                    <Entry x:Name="txtCedula" FontSize="13" Placeholder="Contraseña" Margin="30,10" FontFamily="{StaticResource Hack-Italic}"/>
+                </Frame>
+                <Button Margin="120,30,120,0" Text="Ingresar" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89" FontFamily="{StaticResource Hack-Bold}" CornerRadius="30" Clicked="btnIngresarUser_Clicked" x:Name="btnIngresarUser"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Switch IsToggled="False" x:Name="recordar" Toggled="recordar_Toggled" ThumbColor="Gray"/>
+                <Label Text="Activar el uso de huella"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

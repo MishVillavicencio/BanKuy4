@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.RegistroUsuario">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start" Margin="10,0"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+            <StackLayout Margin="25,0" >
+                <Label Text="Regístrate" HorizontalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" FontFamily="Calibri" TextColor="#2f4f4f"/>
+                <Label Text="*Cedula:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtCedula" FontSize="12"/>
+                </Frame>
+                <Label Text="*Nombre:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtNombre" FontSize="12"/>
+                </Frame>
+                <Label Text="*Primer Apellido:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtPrimerApellido" FontSize="12"/>
+                </Frame>
+                <Label Text="*Segundo Apellido:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtSegundoApellido" FontSize="12"/>
+                </Frame>
+                <Label Text="*Fecha de nacimiento:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtFechaNacimiento" FontSize="12"/>
+                </Frame>
+                <Label Text="*Celular:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtCelular" FontSize="12"/>
+                </Frame>
+                <Label Text="*Correo:" FontAttributes="Italic" FontSize="12" TextColor="#CC4B00"></Label>
+                <Frame Padding="0" Margin="10,0,0,10" BorderColor="#2f4f4f">
+                    <Entry x:Name="txtCorreo" FontSize="12"/>
+                </Frame>
+                <Button Margin="80,0,80,0" Text="Guardar Datos" HeightRequest="50" BackgroundColor="#2f4f4f" 
+                        TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

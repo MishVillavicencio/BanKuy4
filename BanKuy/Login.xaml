@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Login" NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E8F3FF" >
+            <Label Text="BanKuy" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="40" 
+                    FontFamily="{StaticResource Bohemian Soul}" TextColor="#1D4E89" Margin="0,50,0,0"/>
+            <Image Source="logoBank" WidthRequest="150" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="0,0,0,-70" />
+            <StackLayout >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" Margin="0,0,0,60" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnUser" Clicked="btnUser_Clicked" Source="user" BackgroundColor="White" />
+                    </Frame>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnHuella" Clicked="btnHuella_Clicked" Source="huella" BackgroundColor="White" />
+                    </Frame>
+                </Grid>
+            </StackLayout>
+            <StackLayout >
+                <Button x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked" Text="Regístrate aquí" Margin="80,0,80,50" 
+                        CornerRadius="20" FontSize="17" BackgroundColor="#EBF2FA" TextTransform="None"
+                        FontFamily="{StaticResource Hack-Bold}" TextColor="#764134"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

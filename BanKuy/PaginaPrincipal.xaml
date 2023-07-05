@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.PaginaPrincipal" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content >
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="80" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+            </StackLayout>
+
+            <Frame HeightRequest="70" WidthRequest="420"  BackgroundColor="#E8F3FF" Padding="10" Margin="10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="perfil" WidthRequest="50" HorizontalOptions="Start" Margin="30,10"/>
+                    <Label Text="Bienvenid@" FontFamily="{StaticResource Hack-Regular}" Margin="0,-57" FontSize="17" TextColor="Black" HorizontalOptions="CenterAndExpand"></Label>
+                    <Button x:Name="btnPerfil" HorizontalOptions="EndAndExpand" BackgroundColor="#FFCB69" TextColor="#1D4E89" Margin="15,18" Clicked="btnPerfil_Clicked" 
+                            Text="Perfil" FontSize="13" CornerRadius="15" TextTransform="None" FontFamily="{StaticResource Hack-Bold}" />
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Mis productos" TextColor="#542B21" FontSize="18" Margin="20,10" FontFamily="{StaticResource Hack-Bold}"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame HeightRequest="150" WidthRequest="420"  BackgroundColor="#E8F3FF" Padding="10" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Cuenta de Ahorros" Margin="15,0" FontSize="14" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label Text=" " Margin="15,0" FontSize="18" x:Name="nombreCliente" TextColor="Black" FontFamily="{StaticResource Hack-Bold}"></Label>
+                        <Label Text=" " x:Name="idCuenta" Margin="15,0" FontSize="14" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text="Saldo Disponible" Margin="10,0" FontSize="14" Padding="2" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text=" " x:Name="monto" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black" FontFamily="{StaticResource Hack-Bold}"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Acciones Disponibles" TextColor="#542B21" FontSize="16" FontAttributes="Bold" Margin="20,10" FontFamily="{StaticResource Hack-Bold}"/>
+            </StackLayout>
+
+            <StackLayout >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" Margin="70,25,0,0" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnTransferencia" Clicked="btnTransferencia_Clicked" Source="transferencias" BackgroundColor="White" />
+                    </Frame>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" Margin="0,25,70,20" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnServicios" Clicked="btnServicios_Clicked" Source="servicios" BackgroundColor="White" />
+                    </Frame>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" Margin="70,15,0,0" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnMovimientos" Clicked="btnMovimientos_Clicked" Source="movimientos" BackgroundColor="White" />
+                    </Frame>
+                    <Frame HeightRequest="60" WidthRequest="60" BorderColor="#949494"
+                        BackgroundColor="White" Padding="15"
+                        HasShadow="True" Margin="0,15,70,20" CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="1" VerticalOptions="StartAndExpand">
+                        <ImageButton x:Name="btnCuenta" Clicked="btnCuenta_Clicked" Source="cuenta" BackgroundColor="White" />
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

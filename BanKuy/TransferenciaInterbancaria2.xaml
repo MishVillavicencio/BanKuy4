@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.TransferenciaInterbancaria2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Background="#2f4f4f" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image x:Name="imgIcono" Source="logoBank"  WidthRequest="60"  Grid.Column="0" HorizontalOptions="Start"/>
+                <Label Text="BanKuy"  Grid.Column="1" VerticalTextAlignment="Center" FontSize="Large" 
+                       FontAttributes="Bold" TextColor="White"  />
+            </Grid>
+
+            <Label Text="Banco (Nombre del banco)" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center"/>
+            <Label Text="" x:Name="nombrBanco" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center"/>
+
+            <Label Text="Ingrese el monto a transferir: " TextColor="Black" Margin="15" FontSize="14"/>
+            <StackLayout>
+                <Frame HeightRequest="50" WidthRequest="180"
+                       Padding="10"
+                  HasShadow="False" Margin="5" CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtMonto" FontSize="20" Placeholder="0.0" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </StackLayout>
+
+            <Label Text="No. de Cuenta: " TextColor="Black" Margin="15" FontSize="14"/>
+            <Label Text="Ingrese el monto a transferir: " TextColor="Black" HorizontalOptions="EndAndExpand" Margin="0,-45,20,0" FontSize="14"/>
+            <StackLayout Orientation="Horizontal"   >
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180"
+                        BackgroundColor="#E0ECEE" Padding="5"
+                  HasShadow="True" Margin="20,0,0,0"  CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                        <Entry x:Name="txtNcuenta" FontSize="10"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180"
+                        BackgroundColor="#E0ECEE" Padding="5"
+                  HasShadow="True" Margin="40,0" CornerRadius="10"
+                 HorizontalOptions="EndAndExpand">
+                        <Entry x:Name="txtCedulaCliente" FontSize="12"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="Nombre y Apellido: " TextColor="Black" Margin="15" FontSize="14"/>
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="415"
+                        BackgroundColor="#E0ECEE" Padding="5"
+                  HasShadow="True" Margin="20,0,0,0" CornerRadius="10"
+                 HorizontalOptions="StartAndExpand">
+                        <Entry x:Name="txtNombreCliente" FontSize="12"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Frame HeightRequest="20" WidthRequest="400"  BackgroundColor="#E0ECEE" Padding="10" HasShadow="True" Margin="20" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" BorderColor="#2f4f4f">
+                    <StackLayout>
+                        <Label Text="! Esta transaccion tiene un costo de 0.50 centavos !"  FontSize="14" TextColor="Black"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="btnContinuar" Clicked="btnContinuar_Clicked" Margin="120,10" Text="Continuar" HeightRequest="50" BackgroundColor="#2f4f4f" 
+                        TextColor="White" FontAttributes="Bold" CornerRadius="30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

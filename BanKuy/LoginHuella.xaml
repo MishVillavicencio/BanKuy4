@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.LoginHuella">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Button x:Name="btnHuella" Text="Autenticarse" Clicked="btnHuella_Clicked" BackgroundColor="#f3f3f3" TextColor="Black"/>
+                <Label x:Name="Resultado" Text="Huella" HorizontalTextAlignment="Center"/>
+                <Label x:Name="Resultado1" Text="Huella" HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

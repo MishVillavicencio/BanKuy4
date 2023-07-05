@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="BodoniXT" x:TypeArguments="x:String">
+                <On Platform="Android" Value="BodoniXT.ttf#BodoniXT"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="Bohemian Soul" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Bohemian Soul.otf#Bohemian Soul"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="Hack-Bold" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Hack-Bold.ttf#Hack-Bold"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="Hack-BoldItalic" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Hack-BoldItalic.ttf#Hack-BoldItalic"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="Hack-Italic" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Hack-Italic.ttf#Hack-Italic"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="Hack-Regular" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Hack-Regular.ttf#Hack-Regular"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
